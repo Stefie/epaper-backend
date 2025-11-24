@@ -20,7 +20,32 @@ To spin up this example locally, follow these steps:
 ### Default users
 
 The seed script seeds 3 tenants.
-Login with email `demo@payloadcms.com` and password `demo`
+
+**Super Admin:**
+Has access to everything.
+http://localhost:3000/admin/login
+Login with email `super-admin@payloadcms.com` and password `demo` (username `super-admin`)
+
+**Admin**
+Can manage all three Tenants.
+http://localhost:3000/admin/login
+Login with email `admin@payloadcms.com` and password `demo` (username `multi-admin`)
+
+**Users**
+1. http://zeit.localhost:3000/tenant-domains/login
+Login with username `user-zeit` and password `demo`
+http://localhost:3000/admin/login
+Login with email `user-zeit@payloadcms.com` and password `demo`
+
+2. http://mopo.localhost:3000/tenant-domains/login
+Login with username `user-mopo` and password `demo`
+http://localhost:3000/admin/login
+Login with email `user-mopo@payloadcms.com` and password `demo`
+
+2. http://demo.localhost:3000/tenant-domains/login
+Login with username `user-demo` and password `demo`
+http://localhost:3000/admin/login
+Login with email `user-demo@payloadcms.com` and password `demo`
 
 ## How it works
 

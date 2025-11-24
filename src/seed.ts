@@ -31,15 +31,6 @@ export const seed: NonNullable<Config['onInit']> = async (payload): Promise<void
   await payload.create({
     collection: 'users',
     data: {
-      email: 'demo@payloadcms.com',
-      password: 'demo',
-      roles: ['super-admin'],
-    },
-  })
-
-  await payload.create({
-    collection: 'users',
-    data: {
       email: 'tenant1@payloadcms.com',
       password: 'demo',
       tenants: [
@@ -85,7 +76,7 @@ export const seed: NonNullable<Config['onInit']> = async (payload): Promise<void
   await payload.create({
     collection: 'users',
     data: {
-      email: 'multi-admin@payloadcms.com',
+      email: 'admin@payloadcms.com',
       password: 'demo',
       tenants: [
         {
@@ -101,7 +92,16 @@ export const seed: NonNullable<Config['onInit']> = async (payload): Promise<void
           tenant: tenant3.id,
         },
       ],
-      username: 'multi-admin',
+      username: 'admin',
+    },
+  })
+
+  await payload.create({
+    collection: 'users',
+    data: {
+      email: 'super-admin@payloadcms.com',
+      password: 'demo',
+      roles: ['super-admin'],
     },
   })
 
