@@ -8,6 +8,8 @@ import { fileURLToPath } from 'url'
 import { Pages } from './collections/Pages'
 import { Tenants } from './collections/Tenants'
 import Users from './collections/Users'
+import { Footer } from './Footer/config'
+import { Header } from './Header/config'
 import { multiTenantPlugin } from '@payloadcms/plugin-multi-tenant'
 import { isSuperAdmin } from './access/isSuperAdmin'
 import type { Config } from './payload-types'
@@ -22,6 +24,7 @@ export default buildConfig({
   admin: {
     user: 'users',
   },
+  globals: [Header, Footer],
   collections: [Pages, Users, Tenants],
   // db: mongooseAdapter({
   //   url: process.env.DATABASE_URI as string,

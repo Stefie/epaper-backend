@@ -1,5 +1,8 @@
 import React from 'react'
 
+import { Footer } from '@/Footer/Component'
+import { Header } from '@/Header/Component'
+
 import './index.scss'
 
 const baseClass = 'multi-tenant'
@@ -13,7 +16,14 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html className={baseClass} lang="en">
+      <head>
+
+      </head>
+
+      <Header />
       <body>{children}</body>
+      <Footer />
+
     </html>
   )
 }
