@@ -8,13 +8,14 @@ import { fileURLToPath } from 'url'
 import { Pages } from './collections/Pages'
 import { Tenants } from './collections/Tenants'
 import Users from './collections/Users'
+import { Media } from './collections/Media'
 import { Footer } from './Footer/config'
 import { Header } from './Header/config'
 import { multiTenantPlugin } from '@payloadcms/plugin-multi-tenant'
 import { isSuperAdmin } from './access/isSuperAdmin'
 import type { Config } from './payload-types'
 import { getUserTenantIDs } from './utilities/getUserTenantIDs'
-import { seed } from './seed'
+// import { seed } from './seed'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -25,7 +26,7 @@ export default buildConfig({
     user: 'users',
   },
   globals: [Header, Footer],
-  collections: [Pages, Users, Tenants],
+  collections: [Pages, Users, Tenants, Media],
   // db: mongooseAdapter({
   //   url: process.env.DATABASE_URI as string,
   // }),
@@ -34,11 +35,11 @@ export default buildConfig({
       connectionString: process.env.POSTGRES_URL,
     },
   }),
-  onInit: async (args) => {
-    if (process.env.SEED_DB) {
-      await seed(args)
-    }
-  },
+  // onInit: async (args) => {
+  //   if (process.env.SEED_DB) {
+  //     await seed(args)
+  //   }
+  // },
   editor: lexicalEditor({}),
   graphQL: {
     schemaOutputFile: path.resolve(dirname, 'generated-schema.graphql'),
@@ -49,8 +50,10 @@ export default buildConfig({
   },
   plugins: [
     multiTenantPlugin<Config>({
+      cleanupAfterTenantDelete: false,
       collections: {
         pages: {},
+        media: {},
       },
       tenantField: {
         access: {

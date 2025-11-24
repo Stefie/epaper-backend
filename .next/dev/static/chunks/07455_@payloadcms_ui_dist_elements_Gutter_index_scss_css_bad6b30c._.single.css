@@ -1,0 +1,20 @@
+/* [project]/node_modules/.pnpm/@payloadcms+ui@3.64.0_@types+react@19.0.1_monaco-editor@0.55.1_next@16.1.0-canary.0_rea_52870c5534abe0d1ad89657769401cbb/node_modules/@payloadcms/ui/dist/elements/Gutter/index.scss.css [app-client] (css) */
+@layer payload-default {
+  .gutter--left {
+    padding-left: var(--gutter-h);
+  }
+
+  .gutter--right {
+    padding-right: var(--gutter-h);
+  }
+
+  .gutter--negative-left {
+    margin-left: calc(-1 * var(--gutter-h));
+  }
+
+  .gutter--negative-right {
+    margin-right: calc(-1 * var(--gutter-h));
+  }
+}
+
+/*# sourceMappingURL=07455_%40payloadcms_ui_dist_elements_Gutter_index_scss_css_bad6b30c._.single.css.map*/

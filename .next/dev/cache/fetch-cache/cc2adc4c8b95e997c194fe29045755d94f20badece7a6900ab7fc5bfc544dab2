@@ -1,0 +1,1 @@
+{"kind":"FETCH","data":{"headers":{},"body":"{\"id\":1,\"navItems\":[{\"id\":\"69245b75c3bd2abfda1b09fa\",\"link\":{\"type\":\"custom\",\"newTab\":null,\"url\":\"/logout\",\"label\":\"Logout\"}}],\"updatedAt\":\"2025-11-24T13:20:06.481Z\",\"createdAt\":\"2025-11-24T13:20:06.481Z\",\"globalType\":\"footer\"}","status":200,"url":""},"revalidate":31536000,"tags":["global_footer"]}

@@ -6,7 +6,7 @@ import { notFound, redirect } from 'next/navigation'
 import { getPayload } from 'payload'
 import React from 'react'
 
-import { RenderPage } from '../../../../components/RenderPage'
+import { RenderPage } from '../../../../../components/RenderPage'
 
 // eslint-disable-next-line no-restricted-exports
 export default async function Page({
@@ -98,6 +98,8 @@ export default async function Page({
       ],
     },
   })
+
+  console.log("pageQuery>>> ", pageQuery)
 
   const pageData = pageQuery.docs?.[0]
 

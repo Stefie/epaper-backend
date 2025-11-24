@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":["file:///Users/stefaniedoll/websites/prepublic/epaper-backend/.next-internal/server/app/%28payload%29/admin/%5B%5B...segments%5D%5D/page/actions.js%20%28server%20actions%20loader%29"],"sourcesContent":["export {$$RSC_SERVER_ACTION_0 as '4089853f790abbe22797942a2d866bd8f86914f284'} from 'ACTIONS_MODULE0'\nexport {$$RSC_SERVER_ACTION_0 as '607208008f53dd1a4ff702087aa3df96531de02bcf'} from 'ACTIONS_MODULE1'\n"],"names":[],"mappings":";AAAA;AACA"}}]
+}

@@ -15,15 +15,12 @@ export const metadata = {
 // eslint-disable-next-line no-restricted-exports
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html className={baseClass} lang="en">
-      <head>
-
-      </head>
-
-      <Header />
-      <body>{children}</body>
-      <Footer />
-
+    <html className={baseClass} lang="en">  
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }

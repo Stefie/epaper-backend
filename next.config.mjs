@@ -2,8 +2,7 @@ import { withPayload } from '@payloadcms/next/withPayload'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Your Next.js config here
-  async rewrites() {
+ async rewrites() {
     return [
       {
         source: '/((?!admin|api))tenant-domains/:path*',
@@ -17,6 +16,10 @@ const nextConfig = {
       },
     ]
   },
+  // Your Next.js config here
+  devIndicators: {
+    position: 'top-right', // Or 'bottom-left', 'top-left', 'bottom-right'
+  }
 }
 
 export default withPayload(nextConfig)

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/stefaniedoll/websites/prepublic/epaper-backend/node_modules/.pnpm/%40payloadcms%2Brichtext-lexical%403.64.0_%40faceless-ui%2Bmodal%403.0.0_react-dom%4019.0.0_react%4019._bd7baf48251713852e8e278ca79c7dae/node_modules/%40payloadcms/richtext-lexical/src/features/migrations/lexicalPluginToLexical/nodes/unknownConvertedNode/Component.tsx"],"sourcesContent":["'use client'\nimport React from 'react'\n\nimport type { UnknownConvertedNodeData } from './index.js'\n\nimport './index.scss'\n\ntype Props = {\n  data: UnknownConvertedNodeData\n}\n\nexport const UnknownConvertedNodeComponent: React.FC<Props> = (props) => {\n  const { data } = props\n\n  return (\n    <div>\n      Unknown converted payload-plugin-lexical node: <strong>{data?.nodeType}</strong>\n    </div>\n  )\n}\n"],"names":["UnknownConvertedNodeComponent", "props", "data", "_jsxs", "_jsx", "nodeType"],"mappings":";;;;;AACA,MAAkB;;;;AAUX,IAAMA,KAAkDC,GAAA;IAC7D,IAAM,EAAEC,MAAAA,CAAI,EAAA,GAAKD;IAEjB,OACEE,qVAAAA,EAAC,OAAA;QAAA,UAAA;YAAI;gBAC4CC,gVAAAA,EAAC,UAAA;gBAAA,UAAQF,GAAMG;YAAAA;SAAAA;IAAAA;AAGpE"}}]
+}
