@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///turbopack:///[project]/node_modules/.pnpm/@payloadcms+plugin-multi-tenant@3.64.0_@payloadcms+ui@3.64.0_@types+react@19.0.1_monaco_0db2168b1601ae0f38a41a11a8f43018/node_modules/@payloadcms/plugin-multi-tenant/dist/components/TenantSelector/index.scss"],"sourcesContent":[".tenant-selector {\n  width: 100%;\n  margin-bottom: 2rem;\n}\n"],"names":[],"mappings":"AAAA","ignoreList":[0]}}]
-}
