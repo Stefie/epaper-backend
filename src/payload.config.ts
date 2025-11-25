@@ -15,6 +15,7 @@ import { multiTenantPlugin } from '@payloadcms/plugin-multi-tenant'
 import { isSuperAdmin } from './access/isSuperAdmin'
 import type { Config } from './payload-types'
 import { getUserTenantIDs } from './utilities/getUserTenantIDs'
+/** Drops all tables in DB and starts fresh with defined users in src/seed.ts */
 // import { seed } from './seed'
 
 const filename = fileURLToPath(import.meta.url)

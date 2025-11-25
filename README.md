@@ -29,23 +29,23 @@ Login with email `super-admin@payloadcms.com` and password `demo` (username `sup
 **Admin**
 Can manage all three Tenants.
 http://localhost:3000/admin/login
-Login with email `admin@payloadcms.com` and password `demo` (username `multi-admin`)
+Login with email `admin@payloadcms.com` and password `demo` (username `admin`)
 
 **Users**
 1. http://zeit.localhost:3000/tenant-domains/login
-Login with username `user-zeit` and password `demo`
+Login with username `zeit` and password `demo`
 http://localhost:3000/admin/login
-Login with email `user-zeit@payloadcms.com` and password `demo`
+Login with email `zeit@payloadcms.com` and password `demo`
 
 2. http://mopo.localhost:3000/tenant-domains/login
-Login with username `user-mopo` and password `demo`
+Login with username `mopo` and password `demo`
 http://localhost:3000/admin/login
-Login with email `user-mopo@payloadcms.com` and password `demo`
+Login with email `mopo@payloadcms.com` and password `demo`
 
 2. http://demo.localhost:3000/tenant-domains/login
-Login with username `user-demo` and password `demo`
+Login with username `demo` and password `demo`
 http://localhost:3000/admin/login
-Login with email `user-demo@payloadcms.com` and password `demo`
+Login with email `demo@payloadcms.com` and password `demo`
 
 ## How it works
 

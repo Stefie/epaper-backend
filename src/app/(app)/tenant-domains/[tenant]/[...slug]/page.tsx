@@ -99,8 +99,6 @@ export default async function Page({
     },
   })
 
-  console.log("pageQuery>>> ", pageQuery)
-
   const pageData = pageQuery.docs?.[0]
 
   // The page with the provided slug could not be found
