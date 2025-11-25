@@ -1,75 +1,75 @@
 import { Config } from 'payload'
 
 export const seed: NonNullable<Config['onInit']> = async (payload): Promise<void> => {
-  const tenant1 = await payload.create({
+  const zeit = await payload.create({
     collection: 'tenants',
     data: {
-      name: 'Tenant 1',
-      slug: 'gold',
-      domain: 'gold.localhost',
+      name: 'Zeit',
+      slug: 'zeit',
+      domain: 'zeit.localhost',
     },
   })
 
-  const tenant2 = await payload.create({
+  const mopo = await payload.create({
     collection: 'tenants',
     data: {
-      name: 'Tenant 2',
-      slug: 'silver',
-      domain: 'silver.localhost',
+      name: 'Mopo',
+      slug: 'mopo',
+      domain: 'mopo.localhost',
     },
   })
 
-  const tenant3 = await payload.create({
+  const demo = await payload.create({
     collection: 'tenants',
     data: {
-      name: 'Tenant 3',
-      slug: 'bronze',
-      domain: 'bronze.localhost',
+      name: 'Demo',
+      slug: 'demo',
+      domain: 'demo.localhost',
     },
   })
 
   await payload.create({
     collection: 'users',
     data: {
-      email: 'tenant1@payloadcms.com',
+      email: 'zeit@payloadcms.com',
       password: 'demo',
       tenants: [
         {
           roles: ['tenant-admin'],
-          tenant: tenant1.id,
+          tenant: zeit.id,
         },
       ],
-      username: 'tenant1',
+      username: 'zeit',
     },
   })
 
   await payload.create({
     collection: 'users',
     data: {
-      email: 'tenant2@payloadcms.com',
+      email: 'mopo@payloadcms.com',
       password: 'demo',
       tenants: [
         {
           roles: ['tenant-admin'],
-          tenant: tenant2.id,
+          tenant: mopo.id,
         },
       ],
-      username: 'tenant2',
+      username: 'mopo',
     },
   })
 
   await payload.create({
     collection: 'users',
     data: {
-      email: 'tenant3@payloadcms.com',
+      email: 'demo@payloadcms.com',
       password: 'demo',
       tenants: [
         {
           roles: ['tenant-admin'],
-          tenant: tenant3.id,
+          tenant: demo.id,
         },
       ],
-      username: 'tenant3',
+      username: 'demo',
     },
   })
 
@@ -81,15 +81,15 @@ export const seed: NonNullable<Config['onInit']> = async (payload): Promise<void
       tenants: [
         {
           roles: ['tenant-admin'],
-          tenant: tenant1.id,
+          tenant: zeit.id,
         },
         {
           roles: ['tenant-admin'],
-          tenant: tenant2.id,
+          tenant: mopo.id,
         },
         {
           roles: ['tenant-admin'],
-          tenant: tenant3.id,
+          tenant: demo.id,
         },
       ],
       username: 'admin',
@@ -109,8 +109,8 @@ export const seed: NonNullable<Config['onInit']> = async (payload): Promise<void
     collection: 'pages',
     data: {
       slug: 'home',
-      tenant: tenant1.id,
-      title: 'Page for Tenant 1',
+      tenant: zeit.id,
+      title: 'Page for Zeit',
     },
   })
 
@@ -118,8 +118,8 @@ export const seed: NonNullable<Config['onInit']> = async (payload): Promise<void
     collection: 'pages',
     data: {
       slug: 'home',
-      tenant: tenant2.id,
-      title: 'Page for Tenant 2',
+      tenant: mopo.id,
+      title: 'Page for Mopo',
     },
   })
 
@@ -127,8 +127,8 @@ export const seed: NonNullable<Config['onInit']> = async (payload): Promise<void
     collection: 'pages',
     data: {
       slug: 'home',
-      tenant: tenant3.id,
-      title: 'Page for Tenant 3',
+      tenant: demo.id,
+      title: 'Page for Demo Tenant',
     },
   })
 }
