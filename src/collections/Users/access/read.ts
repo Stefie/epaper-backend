@@ -3,7 +3,7 @@ import type { Access, Where } from 'payload'
 import { getTenantFromCookie } from '@payloadcms/plugin-multi-tenant/utilities'
 
 import { isSuperAdmin } from '../../../access/isSuperAdmin'
-import { getUserTenantIDs } from '../../../utilities/getUserTenantIDs'
+import { getUserTenantIDs } from '@/utilities/getUserTenantIDs'
 import { isAccessingSelf } from './isAccessingSelf'
 import { getCollectionIDType } from '@/utilities/getCollectionIDType'
 

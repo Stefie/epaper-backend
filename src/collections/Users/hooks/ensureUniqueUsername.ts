@@ -2,7 +2,7 @@ import type { FieldHook, Where } from 'payload'
 
 import { ValidationError } from 'payload'
 
-import { getUserTenantIDs } from '../../../utilities/getUserTenantIDs'
+import { getUserTenantIDs } from '@/utilities/getUserTenantIDs'
 import { extractID } from '@/utilities/extractID'
 import { getTenantFromCookie } from '@payloadcms/plugin-multi-tenant/utilities'
 import { getCollectionIDType } from '@/utilities/getCollectionIDType'

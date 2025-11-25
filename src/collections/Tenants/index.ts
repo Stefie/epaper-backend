@@ -14,6 +14,10 @@ export const Tenants: CollectionConfig = {
   admin: {
     useAsTitle: 'name',
   },
+  labels: {
+    singular: 'Publication',
+    plural: 'Publications'
+  },
   fields: [
     {
       name: 'name',
@@ -35,17 +39,6 @@ export const Tenants: CollectionConfig = {
       },
       index: true,
       required: true,
-    },
-    {
-      name: 'allowPublicRead',
-      type: 'checkbox',
-      admin: {
-        description:
-          'If checked, logging in is not required to read. Useful for building public pages.',
-        position: 'sidebar',
-      },
-      defaultValue: false,
-      index: true,
-    },
+    }
   ],
 }

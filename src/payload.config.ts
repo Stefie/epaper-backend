@@ -9,6 +9,7 @@ import { Pages } from './collections/Pages'
 import { Tenants } from './collections/Tenants'
 import Users from './collections/Users'
 import { Media } from './collections/Media'
+import { Editions } from './collections/Editions'
 import { Footer } from './Footer/config'
 import { Header } from './Header/config'
 import { multiTenantPlugin } from '@payloadcms/plugin-multi-tenant'
@@ -27,7 +28,7 @@ export default buildConfig({
     user: 'users',
   },
   globals: [Header, Footer],
-  collections: [Pages, Users, Tenants, Media],
+  collections: [Pages, Users, Tenants, Media, Editions],
   // db: mongooseAdapter({
   //   url: process.env.DATABASE_URI as string,
   // }),
@@ -55,6 +56,7 @@ export default buildConfig({
       collections: {
         pages: {},
         media: {},
+        editions: {},
       },
       tenantField: {
         access: {
