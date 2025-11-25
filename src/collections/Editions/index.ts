@@ -3,6 +3,7 @@ import { slugField } from 'payload'
 
 import { hasSuperAdminOrAdminAccess } from '@/access/superAdminOrTenantAdmin'
 import { generatePreviewPath } from '@/utilities/generatePreviewPath'
+// import { revalidateDelete } from './hooks/afterOperationHook'
 
 export const Editions: CollectionConfig = {
   slug: 'editions',
@@ -19,16 +20,27 @@ export const Editions: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
     defaultColumns: ['title', 'slug', 'updatedAt'],
-    livePreview: {
-      url: ({ data, req }) => {
-        console.log('req >>> ', req, "data >>>", data)
-        return generatePreviewPath({
-          slug: data?.slug,
-          collection: 'editions',
-          req,
-        })
-      },
-    },
+     livePreview: {
+       url: ({ data, collectionConfig, globalConfig, req }) => {
+
+         console.log('data.tenant.url >>> ', data, "collectionConfig >>>", collectionConfig, "req >>", req, "globalConfig >>", globalConfig)
+        return `${data.tenant.url}${
+          collectionConfig?.slug === 'editions'
+            ? `/editions/${data.slug}`
+            : `${data.slug !== 'home' ? `/${data.slug}` : ''}`
+        }`
+      }
+     },
+    // livePreview: {
+    //   url: ({ data, req }) => {
+    //     console.log('req >>> ', req, "data >>>", data)
+    //     return generatePreviewPath({
+    //       slug: data?.slug,
+    //       collection: 'editions',
+    //       req,
+    //     })
+    //   },
+    // },
     preview: (data, { req }) =>
       generatePreviewPath({
         slug: data?.slug as string,
@@ -87,5 +99,7 @@ export const Editions: CollectionConfig = {
       schedulePublish: true,
     },
     maxPerDoc: 50,
+  },
+  hooks: {
   },
 }
